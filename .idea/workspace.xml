@@ -2,8 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3767657b-121d-4585-bf8d-e7754f082816" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Cdaf_model_con.php" afterPath="$PROJECT_DIR$/application/models/Cdaf_model_con.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Cd_model.php" afterPath="$PROJECT_DIR$/application/models/Cd_model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Cd_model_con.php" afterPath="$PROJECT_DIR$/application/models/Cd_model_con.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Cd_model_reg.php" afterPath="$PROJECT_DIR$/application/models/Cd_model_reg.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Cd_model_sec.php" afterPath="$PROJECT_DIR$/application/models/Cd_model_sec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Cd_model_tec.php" afterPath="$PROJECT_DIR$/application/models/Cd_model_tec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Cdaf_model.php" afterPath="$PROJECT_DIR$/application/models/Cdaf_model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Cdaf_model_reg.php" afterPath="$PROJECT_DIR$/application/models/Cdaf_model_reg.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Cdaf_model_sec.php" afterPath="$PROJECT_DIR$/application/models/Cdaf_model_sec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Cdaf_model_tec.php" afterPath="$PROJECT_DIR$/application/models/Cdaf_model_tec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Ci_modelo.php" afterPath="$PROJECT_DIR$/application/models/Ci_modelo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Ci_modelo_con.php" afterPath="$PROJECT_DIR$/application/models/Ci_modelo_con.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Ci_modelo_reg.php" afterPath="$PROJECT_DIR$/application/models/Ci_modelo_reg.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Ci_modelo_sec.php" afterPath="$PROJECT_DIR$/application/models/Ci_modelo_sec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Ci_modelo_tec.php" afterPath="$PROJECT_DIR$/application/models/Ci_modelo_tec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Dtm_model.php" afterPath="$PROJECT_DIR$/application/models/Dtm_model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Dtm_model_con.php" afterPath="$PROJECT_DIR$/application/models/Dtm_model_con.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Dtm_model_reg.php" afterPath="$PROJECT_DIR$/application/models/Dtm_model_reg.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Dtm_model_sec.php" afterPath="$PROJECT_DIR$/application/models/Dtm_model_sec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Dtm_model_tec.php" afterPath="$PROJECT_DIR$/application/models/Dtm_model_tec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Pdp_model.php" afterPath="$PROJECT_DIR$/application/models/Pdp_model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Pdp_model_con.php" afterPath="$PROJECT_DIR$/application/models/Pdp_model_con.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Pdp_model_reg.php" afterPath="$PROJECT_DIR$/application/models/Pdp_model_reg.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Pdp_model_sec.php" afterPath="$PROJECT_DIR$/application/models/Pdp_model_sec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Pdp_model_tec.php" afterPath="$PROJECT_DIR$/application/models/Pdp_model_tec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Pmruc_model.php" afterPath="$PROJECT_DIR$/application/models/Pmruc_model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Pmruc_model_con.php" afterPath="$PROJECT_DIR$/application/models/Pmruc_model_con.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Pmruc_model_reg.php" afterPath="$PROJECT_DIR$/application/models/Pmruc_model_reg.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Pmruc_model_sec.php" afterPath="$PROJECT_DIR$/application/models/Pmruc_model_sec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Pmruc_model_tec.php" afterPath="$PROJECT_DIR$/application/models/Pmruc_model_tec.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,18 +40,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Cdaf_model_con.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/models/Cdaf_model_con.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,6 +50,35 @@
       <list>
         <option value="$PROJECT_DIR$/application/config/database.php" />
         <option value="$PROJECT_DIR$/application/models/Cdaf_model_con.php" />
+        <option value="$PROJECT_DIR$/application/models/Cdaf_model_reg.php" />
+        <option value="$PROJECT_DIR$/application/models/Cdaf_model_sec.php" />
+        <option value="$PROJECT_DIR$/application/models/Cdaf_model_tec.php" />
+        <option value="$PROJECT_DIR$/application/models/Ci_modelo.php" />
+        <option value="$PROJECT_DIR$/application/models/Ci_modelo_con.php" />
+        <option value="$PROJECT_DIR$/application/models/Ci_modelo_reg.php" />
+        <option value="$PROJECT_DIR$/application/models/Ci_modelo_sec.php" />
+        <option value="$PROJECT_DIR$/application/models/Ci_modelo_tec.php" />
+        <option value="$PROJECT_DIR$/application/models/Dtm_model.php" />
+        <option value="$PROJECT_DIR$/application/models/Dtm_model_con.php" />
+        <option value="$PROJECT_DIR$/application/models/Dtm_model_reg.php" />
+        <option value="$PROJECT_DIR$/application/models/Dtm_model_sec.php" />
+        <option value="$PROJECT_DIR$/application/models/Dtm_model_tec.php" />
+        <option value="$PROJECT_DIR$/application/models/Pdp_model.php" />
+        <option value="$PROJECT_DIR$/application/models/Pdp_model_con.php" />
+        <option value="$PROJECT_DIR$/application/models/Pdp_model_reg.php" />
+        <option value="$PROJECT_DIR$/application/models/Pdp_model_sec.php" />
+        <option value="$PROJECT_DIR$/application/models/Pdp_model_tec.php" />
+        <option value="$PROJECT_DIR$/application/models/Pmruc_model.php" />
+        <option value="$PROJECT_DIR$/application/models/Pmruc_model_con.php" />
+        <option value="$PROJECT_DIR$/application/models/Pmruc_model_reg.php" />
+        <option value="$PROJECT_DIR$/application/models/Pmruc_model_sec.php" />
+        <option value="$PROJECT_DIR$/application/models/Pmruc_model_tec.php" />
+        <option value="$PROJECT_DIR$/application/models/Cd_model.php" />
+        <option value="$PROJECT_DIR$/application/models/Cd_model_con.php" />
+        <option value="$PROJECT_DIR$/application/models/Cd_model_reg.php" />
+        <option value="$PROJECT_DIR$/application/models/Cd_model_sec.php" />
+        <option value="$PROJECT_DIR$/application/models/Cd_model_tec.php" />
+        <option value="$PROJECT_DIR$/application/models/Cdaf_model.php" />
       </list>
     </option>
   </component>
@@ -124,19 +169,18 @@
       <option name="presentableId" value="Default" />
       <updated>1542912302161</updated>
       <workItem from="1542912303618" duration="426000" />
-      <workItem from="1542982089196" duration="912000" />
+      <workItem from="1542982089196" duration="1685000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1338000" />
+    <option name="totallyTimeSpent" value="2111000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14010283" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14010283" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -154,6 +198,26 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14010283" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -198,10 +262,260 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Cdaf_model_con.php">
+    <entry file="file://$PROJECT_DIR$/application/models/Cdaf_model_reg.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Cdaf_model_sec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Cdaf_model_tec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Ci_modelo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Ci_modelo_con.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Ci_modelo_reg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Ci_modelo_sec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Ci_modelo_tec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Dtm_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Dtm_model_con.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Dtm_model_reg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Dtm_model_sec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Dtm_model_tec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Historial_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Pdp_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Pdp_model_con.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Pdp_model_reg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Pdp_model_sec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Pdp_model_tec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Pmruc_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Pmruc_model_con.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Pmruc_model_reg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Pmruc_model_sec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Pmruc_model_tec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Prestamo_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1539899230000" expanded="true" signature="407:718" ph="SELECT * FRO... usuario" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Cd_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Cd_model_con.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Cd_model_reg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Cd_model_sec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Cd_model_tec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Cdaf_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Cdaf_model_con.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="47" lean-forward="true" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
           <folding />
         </state>
       </provider>
