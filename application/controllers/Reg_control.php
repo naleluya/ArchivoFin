@@ -8,12 +8,12 @@ class Reg_control extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('Pdp_model_reg');
-        $this->load->model('Cdaf_model_reg');
-        $this->load->model('Cd_model_reg');
-        $this->load->model('Ci_modelo_reg');
-        $this->load->model('Dtm_model_reg');
-        $this->load->model('Pmruc_model_reg');
+        $this->load->model('Pdp_model');
+        $this->load->model('Cdaf_model');
+        $this->load->model('Cd_model');
+        $this->load->model('Ci_modelo');
+        $this->load->model('Dtm_model');
+        $this->load->model('Pmruc_model');
         $this->load->model('Login_model');
         $this->load->model('User_model');
         $this->load->helper(array('html', 'url', 'form'));
@@ -36,11 +36,11 @@ class Reg_control extends CI_Controller
     }
     public function list_DTM()
     {
-        $fetch_data = $this->Dtm_model_reg->make_dataTables();
+        $fetch_data = $this->Dtm_model->make_dataTables();
         $data = array();
         foreach ($fetch_data as $row) {
             $subarray = array();
-            $rowComplement = $this->Dtm_model_reg->list_dtmComplement($row->dtm_id);
+            $rowComplement = $this->Dtm_model->list_dtmComplement($row->dtm_id);
             $subarray[] = '<span style="border-bottom:2px black solid;"><span style="font-size: 12px"><b>DTM</b>: <span style="background-color: #FFFF66">' . $row->dtm_nro . '</span></span></span><br><b>Gestion:</b> ' . $rowComplement->dtm_gestion;
                 $pg_date = $rowComplement->dtm_fecha_ingreso;
                 $date_obj = date_create_from_format('Y-m-d', $pg_date);
@@ -79,8 +79,8 @@ class Reg_control extends CI_Controller
         }
         $output = array(
             "draw" => intval($_POST["draw"]),
-            "recordsTotal" => $this->Dtm_model_reg->get_all_data(),
-            "recordsFiltered" => $this->Dtm_model_reg->get_filtered_data(),
+            "recordsTotal" => $this->Dtm_model->get_all_data(),
+            "recordsFiltered" => $this->Dtm_model->get_filtered_data(),
             "data" => $data
         );
         echo json_encode($output);
@@ -137,7 +137,7 @@ class Reg_control extends CI_Controller
         $dtm_partida_pre = strip_tags(trim($this->input->post('dtm_partida_pre')));
         $dtm_partida_pre = ('' == $dtm_partida_pre) ? null : $dtm_partida_pre;
 
-        if ($this->Dtm_model_reg->verificar_DTM_Nro($dtm_nro, $dtm_gestion)){
+        if ($this->Dtm_model->verificar_DTM_Nro($dtm_nro, $dtm_gestion)){
                 $data = array(
                     'dtm_fecha_ingreso' => $dtm_fecha_ingreso,
                     'dtm_nro' => $dtm_nro,
@@ -160,7 +160,7 @@ class Reg_control extends CI_Controller
                     'dtm_bd' => $dtm_bd,
                     'dtm_partida_pre' => $dtm_partida_pre
                 );
-            if ($this->Dtm_model_reg->saveDTM($data))
+            if ($this->Dtm_model->saveDTM($data))
             {redirect("Reg_control/");}
             else
             {echo "Existe los Datos del DTM que desea Registrar";}
@@ -182,7 +182,7 @@ class Reg_control extends CI_Controller
     }
     public function get_dtm($dtm_id)
     {
-        $data = $this->Dtm_model_reg->getDTM($dtm_id);
+        $data = $this->Dtm_model->getDTM($dtm_id);
         echo json_encode($data);
     }
     public function edit_dtm()
@@ -240,7 +240,7 @@ class Reg_control extends CI_Controller
 
         $dtm_id = strip_tags(trim($this->input->post('dtm_id')));
 
-        if ($this->Dtm_model_reg->verificar_DTM_Nro_Update($dtm_nro, $dtm_gestion)){
+        if ($this->Dtm_model->verificar_DTM_Nro_Update($dtm_nro, $dtm_gestion)){
             $data = array(
                 'dtm_fecha_ingreso' => $dtm_fecha_ingreso,
                 'dtm_nro' => $dtm_nro,
@@ -263,7 +263,7 @@ class Reg_control extends CI_Controller
                 'dtm_bd' => $dtm_bd,
                 'dtm_partida_pre' => $dtm_partida_pre
             );
-            if ($this->Dtm_model_reg->updateDTM($dtm_id, $data))
+            if ($this->Dtm_model->updateDTM($dtm_id, $data))
                 redirect("Reg_control/");
             else
                 echo "ya existen los Datos del DTM que desea Registrar";
@@ -295,7 +295,7 @@ class Reg_control extends CI_Controller
                     $destination = './assets/uploads/DTM/' . $nombreArchivo;
                     move_uploaded_file($_FILES['dtm_file']['tmp_name'], $destination);
                     $data = array('dtm_adjuntar' => $nombreArchivo);
-                    $this->Dtm_model_reg->uploadDTM($data, $dtm_id);
+                    $this->Dtm_model->uploadDTM($data, $dtm_id);
                     echo "<b>Archivo guardado correctamente</b>";
                 }
             }else
@@ -326,11 +326,11 @@ class Reg_control extends CI_Controller
     }
     public function list_CI()
     {
-        $fetch_data = $this->Ci_modelo_reg->make_dataTables();
+        $fetch_data = $this->Ci_modelo->make_dataTables();
         $data = array();
         foreach ($fetch_data as $row) {
             $subarray = array();
-            $rowComplement = $this->Ci_modelo_reg->list_ciComplement($row->ci_id);
+            $rowComplement = $this->Ci_modelo->list_ciComplement($row->ci_id);
             $subarray[] = '<span style="border-bottom:2px black solid;"><span style="font-size: 12px"><b>CI</b>: <span style="background-color: #FFFF66">' . $row->ci_nro . '</span></span></span><br><b>Gestion:</b> ' . $rowComplement->ci_gestion;
             $pg_date = $rowComplement->ci_fecha_ingreso;
             $date_obj = date_create_from_format('Y-m-d', $pg_date);
@@ -365,8 +365,8 @@ class Reg_control extends CI_Controller
         }
         $output = array(
             "draw" => intval($_POST["draw"]),
-            "recordsTotal" => $this->Ci_modelo_reg->get_all_data(),
-            "recordsFiltered" => $this->Ci_modelo_reg->get_filtered_data(),
+            "recordsTotal" => $this->Ci_modelo->get_all_data(),
+            "recordsFiltered" => $this->Ci_modelo->get_filtered_data(),
             "data" => $data
         );
         echo json_encode($output);
@@ -416,7 +416,7 @@ class Reg_control extends CI_Controller
         $ci_partida_pre = strip_tags(trim(strtoupper($this->input->post('ci_partida_pre'))));
         $ci_partida_pre = ('' == $ci_partida_pre) ? null : $ci_partida_pre;
 
-        if ($this->Ci_modelo_reg->verificar_CI_Nro($ci_nro, $ci_gestion)){
+        if ($this->Ci_modelo->verificar_CI_Nro($ci_nro, $ci_gestion)){
             $data = array(
                 'ci_fecha_ingreso' => $ci_fecha_ingreso,
                 'ci_nro' => $ci_nro,
@@ -436,7 +436,7 @@ class Reg_control extends CI_Controller
                 'ci_obj_gasto' => $ci_obj_gasto,
                 'ci_partida_pre' => $ci_partida_pre
             );
-            if ($this->Ci_modelo_reg->saveCI($data))
+            if ($this->Ci_modelo->saveCI($data))
                 redirect("Reg_control/ci_index");
             else
                 echo "Existe los Datos del CI que desea Registrar";
@@ -458,7 +458,7 @@ class Reg_control extends CI_Controller
     }
     public function get_ci($ci_id)
     {
-        $data = $this->Ci_modelo_reg->getCI($ci_id);
+        $data = $this->Ci_modelo->getCI($ci_id);
         echo json_encode($data);
     }
     public function edit_ci()
@@ -508,7 +508,7 @@ class Reg_control extends CI_Controller
 
         $ci_id = strip_tags(trim($this->input->post('ci_id')));
 
-        if ($this->Ci_modelo_reg->verificar_CI_Nro_Update($ci_nro, $ci_gestion)){
+        if ($this->Ci_modelo->verificar_CI_Nro_Update($ci_nro, $ci_gestion)){
             $data = array(
                 'ci_fecha_ingreso' => $ci_fecha_ingreso,
                 'ci_nro' => $ci_nro,
@@ -528,7 +528,7 @@ class Reg_control extends CI_Controller
                 'ci_obj_gasto' => $ci_obj_gasto,
                 'ci_partida_pre' => $ci_partida_pre
             );
-            if ($this->Ci_modelo_reg->updateCI($ci_id, $data))
+            if ($this->Ci_modelo->updateCI($ci_id, $data))
                 redirect("Reg_control/ci_index");
             else
                 echo "Existe los Datos del CI que desea Registrar";
@@ -568,11 +568,11 @@ class Reg_control extends CI_Controller
     }
     public function list_CD()
     {
-        $fetch_data = $this->Cd_model_reg->make_dataTables();
+        $fetch_data = $this->Cd_model->make_dataTables();
         $data = array();
         foreach ($fetch_data as $row) {
             $subarray = array();
-            $rowComplement = $this->Cd_model_reg->list_cdComplement($row->cd_id);
+            $rowComplement = $this->Cd_model->list_cdComplement($row->cd_id);
             $subarray[] = '<span style="border-bottom:2px black solid;"><span style="font-size: 12px"><b>CD</b>: <span style="background-color: #FFFF66">' . $row->cd_nro . '</span></span></span><br><b>Gestion:</b> ' . $rowComplement->cd_gestion;
             $pg_date = $rowComplement->cd_fecha_ingreso;
             $date_obj = date_create_from_format('Y-m-d', $pg_date);
@@ -608,8 +608,8 @@ class Reg_control extends CI_Controller
         }
         $output = array(
             "draw" => intval($_POST["draw"]),
-            "recordsTotal" => $this->Cd_model_reg->get_all_data(),
-            "recordsFiltered" => $this->Cd_model_reg->get_filtered_data(),
+            "recordsTotal" => $this->Cd_model->get_all_data(),
+            "recordsFiltered" => $this->Cd_model->get_filtered_data(),
             "data" => $data
         );
         echo json_encode($output);
@@ -691,7 +691,7 @@ class Reg_control extends CI_Controller
                 'cd_bd' => $cd_bd,
                 'cd_partida_pre' => $cd_partida_pre
             );
-            if ($this->Cd_model_reg->saveCD($data))
+            if ($this->Cd_model->saveCD($data))
                 redirect("Reg_control/cd_index");
             else
                 echo "Existe los Datos del CD que desea Registrar";
@@ -713,7 +713,7 @@ class Reg_control extends CI_Controller
     }
     public function get_cd($cd_id)
     {
-        $data = $this->Cd_model_reg->getCD($cd_id);
+        $data = $this->Cd_model->getCD($cd_id);
         echo json_encode($data);
     }
     public function edit_cd()
@@ -772,7 +772,7 @@ class Reg_control extends CI_Controller
 
         $cd_id = strip_tags(trim($this->input->post('cd_id')));
 
-        if ($this->Cd_model_reg->verificar_CD_Nro_Update($cd_nro, $cd_gestion)){
+        if ($this->Cd_model->verificar_CD_Nro_Update($cd_nro, $cd_gestion)){
             $data = array(
                 'cd_fecha_ingreso' => $cd_fecha_ingreso,
                 'cd_nro' => $cd_nro,
@@ -795,7 +795,7 @@ class Reg_control extends CI_Controller
                 'cd_bd' => $cd_bd,
                 'cd_partida_pre' => $cd_partida_pre
             );
-            if ($this->Cd_model_reg->updateCD($cd_id, $data))
+            if ($this->Cd_model->updateCD($cd_id, $data))
                 redirect("Reg_control/cd_index");
             else
                 echo "Existe los Datos del CIDque desea Registrar";
@@ -835,11 +835,11 @@ class Reg_control extends CI_Controller
     }
     public function list_CDAF()
     {
-        $fetch_data = $this->Cdaf_model_reg->make_dataTables();
+        $fetch_data = $this->Cdaf_model->make_dataTables();
         $data = array();
         foreach ($fetch_data as $row) {
             $subarray = array();
-            $rowComplement = $this->Cdaf_model_reg->list_cdafComplement($row->cdaf_id);
+            $rowComplement = $this->Cdaf_model->list_cdafComplement($row->cdaf_id);
             $subarray[] = '<span style="border-bottom:2px black solid;"><span style="font-size: 12px"><b>CDAF</b>: <span style="background-color: #FFFF66">' . $row->cdaf_nro . '</span></span></span><br><b>Gestion:</b> ' . $rowComplement->cdaf_gestion;
                 $pg_date = $rowComplement->cdaf_fecha_ingreso;
                 $date_obj = date_create_from_format('Y-m-d', $pg_date);
@@ -878,8 +878,8 @@ class Reg_control extends CI_Controller
         }
         $output = array(
             "draw" => intval($_POST["draw"]),
-            "recordsTotal" => $this->Cdaf_model_reg->get_all_data(),
-            "recordsFiltered" => $this->Cdaf_model_reg->get_filtered_data(),
+            "recordsTotal" => $this->Cdaf_model->get_all_data(),
+            "recordsFiltered" => $this->Cdaf_model->get_filtered_data(),
             "data" => $data
         );
         echo json_encode($output);
@@ -938,7 +938,7 @@ class Reg_control extends CI_Controller
         $cdaf_partida_pre = strip_tags(trim($this->input->post('cdaf_partida_pre')));
         $cdaf_partida_pre = ('' == $cdaf_partida_pre) ? null : $cdaf_partida_pre;
 
-        if ($this->Cdaf_model_reg->verificar_CDAF_Nro($cdaf_nro, $cdaf_gestion)){
+        if ($this->Cdaf_model->verificar_CDAF_Nro($cdaf_nro, $cdaf_gestion)){
             $data = array(
                 'cdaf_fecha_ingreso' => $cdaf_fecha_ingreso,
                 'cdaf_nro' => $cdaf_nro,
@@ -961,7 +961,7 @@ class Reg_control extends CI_Controller
                 'cdaf_bd' => $cdaf_bd,
                 'cdaf_partida_pre' => $cdaf_partida_pre
             );
-            if ($this->Cdaf_model_reg->saveCDAF($data))
+            if ($this->Cdaf_model->saveCDAF($data))
                 redirect("Reg_control/cdaf_index");
             else
                 echo "Existe los Datos del CDAF que desea Registrar";
@@ -983,7 +983,7 @@ class Reg_control extends CI_Controller
     }
     public function get_cdaf($cdaf_id)
     {
-        $data = $this->Cdaf_model_reg->getCDAF($cdaf_id);
+        $data = $this->Cdaf_model->getCDAF($cdaf_id);
         echo json_encode($data);
     }
     public function edit_cdaf()
@@ -1042,7 +1042,7 @@ class Reg_control extends CI_Controller
 
         $cdaf_id = strip_tags(trim($this->input->post('cdaf_id')));
 
-        if ($this->Cdaf_model_reg->verificar_CDAF_Nro_Update($cdaf_nro, $cdaf_gestion)){
+        if ($this->Cdaf_model->verificar_CDAF_Nro_Update($cdaf_nro, $cdaf_gestion)){
             $data = array(
                 'cdaf_fecha_ingreso' => $cdaf_fecha_ingreso,
                 'cdaf_nro' => $cdaf_nro,
@@ -1065,7 +1065,7 @@ class Reg_control extends CI_Controller
                 'cdaf_bd' => $cdaf_bd,
                 'cdaf_partida_pre' => $cdaf_partida_pre
             );
-            if ($this->Cdaf_model_reg->updateCDAF($cdaf_id, $data))
+            if ($this->Cdaf_model->updateCDAF($cdaf_id, $data))
                 redirect("Reg_control/cdaf_index");
             else
                 echo "Existe los Datos del CDAF que desea Registrar";
@@ -1105,11 +1105,11 @@ class Reg_control extends CI_Controller
     }
     public function list_PDP()
     {
-        $fetch_data = $this->Pdp_model_reg->make_dataTables();
+        $fetch_data = $this->Pdp_model->make_dataTables();
         $data = array();
         foreach ($fetch_data as $row) {
             $subarray = array();
-            $rowComplement = $this->Pdp_model_reg->list_pdpComplement($row->pdp_id);
+            $rowComplement = $this->Pdp_model->list_pdpComplement($row->pdp_id);
             $subarray[] = '<span style="border-bottom:2px black solid;"><span style="font-size: 12px"><b>PDP</b>: <span style="background-color: #FFFF66">' . $row->pdp_nro . '</span></span></span><br><b>Gestion:</b> ' . $rowComplement->pdp_gestion;
             $pg_date = $rowComplement->pdp_fecha_ingreso;
             $date_obj = date_create_from_format('Y-m-d', $pg_date);
@@ -1149,8 +1149,8 @@ class Reg_control extends CI_Controller
         }
         $output = array(
             "draw" => intval($_POST["draw"]),
-            "recordsTotal" => $this->Pdp_model_reg->get_all_data(),
-            "recordsFiltered" => $this->Pdp_model_reg->get_filtered_data(),
+            "recordsTotal" => $this->Pdp_model->get_all_data(),
+            "recordsFiltered" => $this->Pdp_model->get_filtered_data(),
             "data" => $data
         );
         echo json_encode($output);
@@ -1209,7 +1209,7 @@ class Reg_control extends CI_Controller
         $pdp_partida_pre = strip_tags(trim($this->input->post('pdp_partida_pre')));
         $pdp_partida_pre = ('' == $pdp_partida_pre) ? null : $pdp_partida_pre;
 
-        if ($this->Pdp_model_reg->verificar_PDP_Nro($pdp_nro, $pdp_gestion)){
+        if ($this->Pdp_model->verificar_PDP_Nro($pdp_nro, $pdp_gestion)){
             $data = array(
                 'pdp_fecha_ingreso' => $pdp_fecha_ingreso,
                 'pdp_nro' => $pdp_nro,
@@ -1232,7 +1232,7 @@ class Reg_control extends CI_Controller
                 'pdp_bd' => $pdp_bd,
                 'pdp_partida_pre' => $pdp_partida_pre
             );
-            if ($this->Pdp_model_reg->savePDP($data))
+            if ($this->Pdp_model->savePDP($data))
                 redirect("Reg_control/pdp_index");
             else
                 echo "Existe los Datos del PDP que desea Registrar";
@@ -1254,7 +1254,7 @@ class Reg_control extends CI_Controller
     }
     public function get_pdp($pdp_id)
     {
-        $data = $this->Pdp_model_reg->getPDP($pdp_id);
+        $data = $this->Pdp_model->getPDP($pdp_id);
         echo json_encode($data);
     }
     public function edit_pdp()
@@ -1313,7 +1313,7 @@ class Reg_control extends CI_Controller
 
         $pdp_id = strip_tags(trim($this->input->post('pdp_id')));
 
-        if ($this->Pdp_model_reg->verificar_PDP_Nro_Update($pdp_nro, $pdp_gestion)){
+        if ($this->Pdp_model->verificar_PDP_Nro_Update($pdp_nro, $pdp_gestion)){
             $data = array(
                 'pdp_fecha_ingreso' => $pdp_fecha_ingreso,
                 'pdp_nro' => $pdp_nro,
@@ -1336,7 +1336,7 @@ class Reg_control extends CI_Controller
                 'pdp_bd' => $pdp_bd,
                 'pdp_partida_pre' => $pdp_partida_pre
             );
-            if ($this->Pdp_model_reg->updatePDP($pdp_id, $data))
+            if ($this->Pdp_model->updatePDP($pdp_id, $data))
                 redirect("Reg_control/pdp_index");
             else
                 echo "Existe los Datos del PDP que desea Registrar";
@@ -1357,7 +1357,7 @@ class Reg_control extends CI_Controller
         }
     }
 
-    ////////PDP///////////////
+    ////////PMRUC///////////////
     public function pmruc_index()
     {
         $data_session = $this->session->all_userdata();
@@ -1376,11 +1376,11 @@ class Reg_control extends CI_Controller
     }
     public function list_PMRUC()
     {
-        $fetch_data = $this->Pmruc_model_reg->make_dataTables();
+        $fetch_data = $this->Pmruc_model->make_dataTables();
         $data = array();
         foreach ($fetch_data as $row) {
             $subarray = array();
-            $rowComplement = $this->Pmruc_model_reg->list_pmrucComplement($row->pmruc_id);
+            $rowComplement = $this->Pmruc_model->list_pmrucComplement($row->pmruc_id);
             $subarray[] = '<span style="border-bottom:2px black solid;"><span style="font-size: 12px"><b>PMRUC</b>: <span style="background-color: #FFFF66">' . $row->pmruc_nro . '</span></span></span><br><b>Gestion:</b> ' . $rowComplement->pmruc_gestion;
             $pg_date = $rowComplement->pmruc_fecha_ingreso;
             $date_obj = date_create_from_format('Y-m-d', $pg_date);
@@ -1420,8 +1420,8 @@ class Reg_control extends CI_Controller
         }
         $output = array(
             "draw" => intval($_POST["draw"]),
-            "recordsTotal" => $this->Pmruc_model_reg->get_all_data(),
-            "recordsFiltered" => $this->Pmruc_model_reg->get_filtered_data(),
+            "recordsTotal" => $this->Pmruc_model->get_all_data(),
+            "recordsFiltered" => $this->Pmruc_model->get_filtered_data(),
             "data" => $data
         );
         echo json_encode($output);
@@ -1480,7 +1480,7 @@ class Reg_control extends CI_Controller
         $pmruc_partida_pre = strip_tags(trim($this->input->post('pmruc_partida_pre')));
         $pmruc_partida_pre = ('' == $pmruc_partida_pre) ? null : $pmruc_partida_pre;
 
-        if ($this->Pmruc_model_reg->verificar_PMRUC_Nro($pmruc_nro, $pmruc_gestion)){
+        if ($this->Pmruc_model->verificar_PMRUC_Nro($pmruc_nro, $pmruc_gestion)){
             $data = array(
                 'pmruc_fecha_ingreso' => $pmruc_fecha_ingreso,
                 'pmruc_nro' => $pmruc_nro,
@@ -1503,7 +1503,7 @@ class Reg_control extends CI_Controller
                 'pmruc_bd' => $pmruc_bd,
                 'pmruc_partida_pre' => $pmruc_partida_pre
             );
-            if ($this->Pmruc_model_reg->savePMRUC($data))
+            if ($this->Pmruc_model->savePMRUC($data))
                 redirect("Reg_control/pmruc_index");
             else
                 echo "Existe los Datos del PMRUC que desea Registrar";
@@ -1525,7 +1525,7 @@ class Reg_control extends CI_Controller
     }
     public function get_pmruc($pmruc_id)
     {
-        $data = $this->Pmruc_model_reg->getPMRUC($pmruc_id);
+        $data = $this->Pmruc_model->getPMRUC($pmruc_id);
         echo json_encode($data);
     }
     public function edit_pmruc()
@@ -1584,7 +1584,7 @@ class Reg_control extends CI_Controller
 
         $pmruc_id = strip_tags(trim($this->input->post('pmruc_id')));
 
-        if ($this->Pmruc_model_reg->verificar_PMRUC_Nro_Update($pmruc_nro, $pmruc_gestion)){
+        if ($this->Pmruc_model->verificar_PMRUC_Nro_Update($pmruc_nro, $pmruc_gestion)){
             $data = array(
                 'pmruc_fecha_ingreso' => $pmruc_fecha_ingreso,
                 'pmruc_nro' => $pmruc_nro,
@@ -1607,7 +1607,7 @@ class Reg_control extends CI_Controller
                 'pmruc_bd' => $pmruc_bd,
                 'pmruc_partida_pre' => $pmruc_partida_pre
             );
-            if ($this->Pmruc_model_reg->updatePMRUC($pmruc_id, $data))
+            if ($this->Pmruc_model->updatePMRUC($pmruc_id, $data))
                 redirect("Reg_control/pmruc_index");
             else
                 echo "Existe los Datos del PMRUC que desea Registrar";
